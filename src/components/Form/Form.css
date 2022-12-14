@@ -4,4 +4,16 @@
   flex: 0 1 auto;
   border-radius: 16px;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.08);
+}
+
+.form__title {
+  font-size: 20px;
+  line-height: 23px;
+  color: #151317;
+  margin: 0;
 }

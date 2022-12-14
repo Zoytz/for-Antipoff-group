@@ -4,7 +4,8 @@ import Form from '../Form/Form';
 function App() {
   return (
     <div className="page">
-      <Form />
+      <Form>
+      </Form>
     </div>
   );
 }
