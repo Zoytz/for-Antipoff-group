@@ -1,0 +1,7 @@
+.form {
+  margin: 0;
+  width: 500px;
+  flex: 0 1 auto;
+  border-radius: 16px;
+  padding: 16px;
+}
