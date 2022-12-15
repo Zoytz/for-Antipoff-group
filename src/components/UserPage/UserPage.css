@@ -1,0 +1,98 @@
+.user-page__header {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #512689;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px 80px 39px;
+}
+
+.user-page__button {
+  padding: 8px 16px;
+  background: none;
+  border: 1px solid #F8F8F8;
+  color: #F8F8F8;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 8px;
+}
+
+.user-page__user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 1 auto;
+  margin-left: 29px;
+}
+
+.user-page__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 32px;
+}
+
+.user-page__image {
+  width: 187px;
+  height: 187px;
+  border-radius: 99em;
+  overflow: hidden;
+}
+
+.user-page__title {
+  margin: 0;
+  font-size: 64px;
+  line-height: 75px;
+  color: #FFF;
+}
+
+.user-page__subtitle {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 32px;
+  line-height: 38px;
+  color: #FFF;
+}
+
+.user-page__main {
+ display: flex;
+ justify-content: space-between;
+ width: 947px;
+ padding-top: 48px;
+}
+
+.user-page__description {
+  max-width: 630px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #151317;
+  margin: 0;
+}
+
+.user-page__contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 188px;
+}
+
+.user-page__contact {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: #151317;
+}
+
+.user-page__contact:first-of-type {
+  margin: 0;
+}
+
+.user-page__span {
+  margin-left: 8px;
+}
