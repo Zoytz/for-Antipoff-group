@@ -7,7 +7,7 @@ import UserPage from '../UserPage/UserPage';
 function App() {
   return (
     <div className="page">
-      <UserPage />
+      <Main />
     </div>
   );
 }

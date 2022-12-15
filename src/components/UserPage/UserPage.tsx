@@ -5,10 +5,15 @@ import mail from '../../images/mail.png';
 const UserPage = () => {
   return (
     <>
+      <div className="user-page__mobile-buttons">
+        <button className="user-page__mobile-button user-page__mobile-button_type_back"></button>
+        <button className="user-page__mobile-button user-page__mobile-button_type_logout "></button>
+      </div>
       <div className="user-page__header">
         <button className="user-page__button">
           Назад
         </button>
+
         <div className="user-page__user">
           <img src={image} alt="" className="user-page__image" />
           <div className="user-page__info">
