@@ -1,16 +1,15 @@
-import React, {FC, ReactNode} from "react";
+import {FC, ReactElement} from "react";
 import { Navigate } from "react-router-dom";
 
 type PropsType = {
   isLoggedIn: boolean
-  children: ReactNode
+  children: ReactElement
 }
 
-const ProtectedRoute:FC<PropsType> = React.memo(() => {
+const ProtectedRoute: FC<PropsType> = ({isLoggedIn, children}) => {
   return (
-    <></>
-    // isLoggedIn ? children : <Navigate to="/movies" />
+    isLoggedIn ? children : <Navigate to="/register" />
   );
-});
+};
 
 export default ProtectedRoute;

@@ -1,5 +1,5 @@
 .form {
-  margin: 0;
+  margin: auto;
   width: 500px;
   flex: 0 1 auto;
   border-radius: 16px;
@@ -27,4 +27,8 @@
   border-radius: 8px;
   background-color: #512689;
   margin-top: 24px;
+}
+
+.form__button_type_disabled {
+  opacity: .5;
 }
