@@ -14,8 +14,8 @@ const Input: FC<PropsType> = ({ type, error, name, label, required, onChange, va
   return (
     <label htmlFor={name} className="input__label">
       {label}
-      <input value={value || ''} onChange={onChange} required={required} type={type} className="input input_type_error" name={name} />
-      <span className="input__error input__error_type_visible">{error}</span>
+      <input value={value || ''} onChange={onChange} required={required} type={type} className={`input ${error ? "input_type_error" : ""}`} name={name} />
+      <span className={`input__error ${error ? "input__error_type_visible" : ""}`}>{error}</span>
     </label>
   )
 }
