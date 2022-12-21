@@ -13,8 +13,9 @@ function App() {
 
   const state = useAppSelector((state: RootState) => state);
   const dispatch = useAppDispatch();
+  const { isLoggedIn } = useAppSelector((state: RootState) => state.user);
 
-  console.log(state, 'state before')
+  console.log(isLoggedIn)
 
   useEffect(() => {
     dispatch(fetchUsers());
@@ -30,13 +31,13 @@ function App() {
         } />
         <Route path='/' element=
           {
-            <ProtectedRoute isLoggedIn={true}>
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
               <Main />
             </ProtectedRoute>
           } />
         <Route path='/user/:userId' element=
           {
-            <ProtectedRoute isLoggedIn={true}>
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
               <UserPage />
             </ProtectedRoute>
           } />

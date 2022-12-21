@@ -1,0 +1,7 @@
+.registerForm__error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #FF6161;
+  margin: 0;
+}

@@ -2,6 +2,7 @@ import axios from "axios";
 import { AppDispatch } from "..";
 import { MeType } from "../../components/RegisterForm/RegisterForm";
 import { usersLoading, usersLoaded, usersLoadingError } from "./fetchUsersSlice";
+import { userRegisterSuccess, userRegisterFailure } from "./userSlice";
 
 export type UserType = {
   id: number
@@ -28,10 +29,10 @@ export const fetchUsers = () => async (dispatch: AppDispatch) => {
   .catch((error) => dispatch(usersLoadingError(error.message)))
 }
 
-// export const register = (user: MeType) => async (dispatch: AppDispatch) => {
-//   const { email, password } = user;
-//   const registerData = JSON.stringify({email: email, password: password});
-//   await axios.post<RegisterResponseType>('https://reqres.in/api/register', registerData)
-//   .then((res) => console.log(res))
-//   .catch((error) => dispatch(registerFailure(error)))
-// }
+export const registerUser = (user: MeType) => async (dispatch: AppDispatch) => {
+  const { email, password } = user;
+  await axios.post<RegisterResponseType>('https://reqres.in/api/register', {email, password})
+  .then((res) => dispatch(userRegisterSuccess({...user, ...res.data})))
+  .catch((error) => {console.log(error); dispatch(userRegisterFailure(error.message))});
+}
+
