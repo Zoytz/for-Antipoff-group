@@ -20,6 +20,7 @@ const UserPage = () => {
   
   const handleLogout = () => {
     dispatch(userLogout());
+    localStorage.removeItem('token');
     navigate('/');
   }
 

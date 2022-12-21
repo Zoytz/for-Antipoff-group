@@ -15,8 +15,6 @@ function App() {
   const dispatch = useAppDispatch();
   const { isLoggedIn } = useAppSelector((state: RootState) => state.user);
 
-  console.log(state)
-
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);

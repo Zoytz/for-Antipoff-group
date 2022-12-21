@@ -31,7 +31,10 @@ export const fetchUsers = () => async (dispatch: AppDispatch) => {
 export const registerUser = (user: MeType) => async (dispatch: AppDispatch) => {
   const { email, password } = user;
   await axios.post<RegisterResponseType>('https://reqres.in/api/register', {email, password})
-  .then((res) => dispatch(userRegisterSuccess({...user, ...res.data})))
+  .then((res) => {
+    dispatch(userRegisterSuccess({...user, ...res.data}));
+    localStorage.setItem('token', res.data.token);
+  })
   .catch((error) => {console.log(error); dispatch(userRegisterFailure(error.message))});
 }
 
