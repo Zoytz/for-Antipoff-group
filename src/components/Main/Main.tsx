@@ -5,16 +5,23 @@ import { RootState } from "../../store";
 import { useAppDispatch } from '../../hooks/redux';
 import { usersDisplayedCount } from '../../store/reducers/fetchUsersSlice';
 import Preloader from "../Preloader/Preloader";
+import { userLogout } from "../../store/reducers/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const { users, displayedUsersCount, isLoading } = useAppSelector((state: RootState) => state.users);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    dispatch(userLogout());
+    navigate('/');
+  }
 
   return (
     <>
       <header className="header">
-        <button className="header__button">Выход</button>
-        <button className="header__mobile-button"></button>
+        <button onClick={handleLogout} className="header__button">Выход</button>
+        <button onClick={handleLogout} className="header__mobile-button"></button>
       </header>
       <main className="main">
         <div className="main__header">

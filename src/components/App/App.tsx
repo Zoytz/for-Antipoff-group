@@ -15,13 +15,11 @@ function App() {
   const dispatch = useAppDispatch();
   const { isLoggedIn } = useAppSelector((state: RootState) => state.user);
 
-  console.log(isLoggedIn)
+  console.log(state)
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
-
-  console.log(state, 'state after');
 
   return (
     <div className="page">
