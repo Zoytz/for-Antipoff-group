@@ -91,6 +91,10 @@
   background: none;
 }
 
+.main__button_type_invisible {
+  display: none;
+}
+
 .main__button-image {
   width: 18px;
   height: 9px;

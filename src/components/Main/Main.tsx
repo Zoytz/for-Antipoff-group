@@ -1,7 +1,15 @@
 import UserCard from "../UserCard/UserCard";
 import arrowImage from "../../images/arrow.png";
+import { useAppSelector } from "../../hooks/redux";
+import { RootState } from "../../store";
+import { useAppDispatch } from '../../hooks/redux';
+import { usersDisplayedCount } from '../../store/reducers/fetchUsersSlice';
+import Preloader from "../Preloader/Preloader";
 
 const Main = () => {
+  const { users, displayedUsersCount, isLoading } = useAppSelector((state: RootState) => state.users);
+  const dispatch = useAppDispatch();
+
   return (
     <>
       <header className="header">
@@ -18,16 +26,18 @@ const Main = () => {
           </h2>
         </div>
         <ul className="users page__list">
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
-          <UserCard />
+          {
+            isLoading ? 
+            <Preloader />
+            :
+            [...users].slice(0, displayedUsersCount).map((user) => {
+              return (
+                <UserCard key={user.id} user={user} />
+              )
+            })
+          }
         </ul>
-        <button className="main__button">Показать еще <img src={arrowImage} alt="" className="main__button-image" /></button>
+        <button onClick={() => dispatch(usersDisplayedCount())} className={`main__button ${users.length <= displayedUsersCount ? "main__button_type_invisible" : ""}`}>Показать еще <img src={arrowImage} alt="" className="main__button-image" /></button>
       </main>
     </>
   )
