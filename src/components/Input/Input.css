@@ -43,6 +43,7 @@
   line-height: 12px;
   color: #FF6161;
   opacity: 0;
+  transform: translateY(53%);
 }
 
 .input__error_type_visible {
