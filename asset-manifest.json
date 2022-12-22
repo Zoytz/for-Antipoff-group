@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/for-Antipoff-group/static/css/main.9c01676d.css",
-    "main.js": "/for-Antipoff-group/static/js/main.5b93c579.js",
+    "main.js": "/for-Antipoff-group/static/js/main.1a3fc9cd.js",
     "static/media/roboto-regular.woff": "/for-Antipoff-group/static/media/roboto-regular.2163579e5723555030da.woff",
     "index.html": "/for-Antipoff-group/index.html",
     "main.9c01676d.css.map": "/for-Antipoff-group/static/css/main.9c01676d.css.map",
-    "main.5b93c579.js.map": "/for-Antipoff-group/static/js/main.5b93c579.js.map"
+    "main.1a3fc9cd.js.map": "/for-Antipoff-group/static/js/main.1a3fc9cd.js.map"
   },
   "entrypoints": [
     "static/css/main.9c01676d.css",
-    "static/js/main.5b93c579.js"
+    "static/js/main.1a3fc9cd.js"
   ]
 }
