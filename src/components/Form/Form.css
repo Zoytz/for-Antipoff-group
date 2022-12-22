@@ -35,3 +35,9 @@
 .form__button_type_disabled {
   opacity: .5;
 }
+
+@media screen and (max-width: 530px) {
+  .form {
+    width: 95%;
+  }
+}
